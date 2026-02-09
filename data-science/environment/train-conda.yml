@@ -1,0 +1,18 @@
+name: sklearn-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - scikit-learn=1.2.0
+  - scipy=1.10.0
+  - pandas
+  - matplotlib
+  - pip:
+    - mlflow
+    - azureml-mlflow
+    - azureml-inference-server-http
+    - cloudpickle
+    # Observability tools from your class template
+    - git+https://github.com/microsoft/AzureML-Observability#subdirectory=aml-obs-client
+    - git+https://github.com/microsoft/AzureML-Observability#subdirectory=aml-obs-collector
